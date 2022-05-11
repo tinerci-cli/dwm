@@ -6,15 +6,16 @@ dwm-cyclelayouts-20180524-6.2.diff
 dwm-focusmonmouse-6.2.diff
 dwm-hide_vacant_tags-6.3.diff
 dwm-pertag-20200914-61bb8b2.diff
-dwm-shif-tools-6.2.diff
 dwm-statusallmons-6.2.diff
 dwm-steam-6.2.diff
 dwm-swallow-20201211-61bb8b2.diff
 dwm-systray-6.3.diff
-dwm-vanitygaps-6.2.diff
+dwm-cfacts-vanitygaps-6.2_combo.diff
 
 current:
-dwm-xresources-20210827-138b405.diff
+dwm-shif-tools-6.2.diff
+dwm-movestack-20211115-a786211.diff
 
 done:
 dwm-attachbottom-20201227-61bb8b2.diff
+dwm-xresources-20210827-138b405.diff
