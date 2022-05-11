@@ -3,6 +3,11 @@
 /* appearance */
 static unsigned int borderpx  = 1;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
+static unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
+static unsigned int systrayspacing = 2;   /* systray spacing */
+static int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static int showsystray        = 1;     /* 0 means no systray */
 static int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static int showbar            = 1;        /* 0 means no standard bar */
 static int topbar             = 1;        /* 0 means standard bar at bottom */
@@ -71,24 +76,30 @@ static const char *termcmd[]  = { "st", NULL };
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",               STRING,  &font },
-		{ "dmenufont",          STRING,  &dmenufont },
-		{ "normbgcolor",        STRING,  &normbgcolor },
-		{ "normbordercolor",    STRING,  &normbordercolor },
-		{ "normfgcolor",        STRING,  &normfgcolor },
-		{ "selbgcolor",         STRING,  &selbgcolor },
-		{ "selbordercolor",     STRING,  &selbordercolor },
-		{ "selfgcolor",         STRING,  &selfgcolor },
-		{ "borderpx",          	INTEGER, &borderpx },
-		{ "snap",          		INTEGER, &snap },
-		{ "showbar",          	INTEGER, &showbar },
-		{ "topbar",          	INTEGER, &topbar },
-		{ "extrabar",          	INTEGER, &extrabar },
-        { "statussep",          STRING,  &statussep },
-        { "swallowfloating",          STRING,  &swallowfloating },
-		{ "nmaster",          	INTEGER, &nmaster },
-		{ "resizehints",       	INTEGER, &resizehints },
-		{ "mfact",      	 	FLOAT,   &mfact },
+		{ "font",                       STRING,  &font },
+		{ "dmenufont",                  STRING,  &dmenufont },
+		{ "normbgcolor",                STRING,  &normbgcolor },
+		{ "normbordercolor",            STRING,  &normbordercolor },
+		{ "normfgcolor",                STRING,  &normfgcolor },
+		{ "selbgcolor",                 STRING,  &selbgcolor },
+		{ "selbordercolor",             STRING,  &selbordercolor },
+		{ "selfgcolor",                 STRING,  &selfgcolor },
+		{ "borderpx",          	        INTEGER, &borderpx },
+		{ "snap",          		        INTEGER, &snap },
+		{ "showbar",          	        INTEGER, &showbar },
+		{ "topbar",          	        INTEGER, &topbar },
+		{ "extrabar",          	        INTEGER, &extrabar },
+        { "statussep",                  STRING,  &statussep },
+        { "swallowfloating",            STRING,  &swallowfloating },
+		{ "nmaster",          	        INTEGER, &nmaster },
+		{ "resizehints",       	        INTEGER, &resizehints },
+		{ "mfact",      	 	        FLOAT,   &mfact },
+        { "systraypinning",             INTEGER, &systraypinning },
+        { "systrayonleft",              INTEGER, &systrayonleft },
+        { "systrayspacing",             INTEGER, &systrayspacing },
+        { "systraypinningfailfirst",    INTEGER, &systraypinningfailfirst },
+        { "showsystray",                INTEGER, &showsystray},
+
 };
 
 static Key keys[] = {
@@ -143,8 +154,8 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkExBarLeftStatus,   0,              Button2,        spawn,          {.v = termcmd } },
