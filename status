@@ -1,7 +1,6 @@
 todo:
 (?) dwm-steam-6.2.diff
-keybindings
-organization
+emoji support
 
 
 
@@ -33,3 +32,6 @@ dwm-cyclelayouts-20180524-6.2.diff
     multimon:
 dwm-statusallmons-6.2.diff
 dwm-focusmonmouse-6.2.diff
+
+keybindings
+organization
