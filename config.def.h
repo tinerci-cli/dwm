@@ -34,7 +34,20 @@ static char *colors[][3] = {
 };
 
 static const char *const autostart[] = {
-	"st", NULL,
+	//"st", NULL,
+    "pipewire", NULL,
+    "pipewire-pulse", NULL,
+    "setbg", NULL,
+    "clipmenud", NULL,
+    "numlockx", NULL,
+    "picom", NULL,
+    "sxhkd", NULL,
+    "nm-applet", NULL,
+    "wmname", "LG3D", NULL
+    "syncthing-gtk", "-m", NULL,
+    "unclutter", NULL,
+    "dwmblocks", NULL,
+    "xautolock", "-time", "-3", "-locker", "-slock", NULL,
 	NULL /* terminate */
 };
 
