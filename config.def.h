@@ -43,7 +43,7 @@ static const char *const autostart[] = {
     "picom", NULL,
     "sxhkd", NULL,
     "nm-applet", NULL,
-    "wmname", "LG3D", NULL
+    "wmname", "LG3D", NULL,
     "syncthing-gtk", "-m", NULL,
     "unclutter", NULL,
     "dwmblocks", NULL,
