@@ -61,6 +61,7 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
+#include "shift-tools.c"
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -82,7 +83,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -124,10 +125,10 @@ ResourcePref resources[] = {
         { "systrayspacing",             INTEGER, &systrayspacing },
         { "systraypinningfailfirst",    INTEGER, &systraypinningfailfirst },
         { "showsystray",                INTEGER, &showsystray},
-        { "gapih",                      INTEGER, &gapih },
-        { "gapiv",                      INTEGER, &gapiv },
-        { "gapoh",                      INTEGER, &gapoh },
-        { "gapov",                      INTEGER, &gapov },
+        { "gappih",                      INTEGER, &gappih },
+        { "gappiv",                      INTEGER, &gappiv },
+        { "gappoh",                      INTEGER, &gappoh },
+        { "gappov",                      INTEGER, &gappov },
         { "smartgaps",                      INTEGER, &smartgaps },
 
 };
