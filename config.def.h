@@ -18,9 +18,9 @@ static int showbar            = 1;        /* 0 means no standard bar */
 static int topbar             = 1;        /* 0 means standard bar at bottom */
 static int extrabar           = 1;        /* 0 means no extra bar */
 static char statussep         = ';';      /* separator between statuses */
-//static char font[]            = "monospace:size=10";
+static char font[]            = "monospace:size=10";
 static char dmenufont[]       = "monospace:size=10";
-static const char *fonts[]          = { "Noto Color Emoji:size=12", "monospace:size=10", "Font Awesome 5 Free Solid:size=12" };
+static const char *fonts[]          = { font };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -61,7 +61,7 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	//{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
