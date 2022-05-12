@@ -18,9 +18,9 @@ static int showbar            = 1;        /* 0 means no standard bar */
 static int topbar             = 1;        /* 0 means standard bar at bottom */
 static int extrabar           = 1;        /* 0 means no extra bar */
 static char statussep         = ';';      /* separator between statuses */
-static char font[]            = "monospace:size=10";
+//static char font[]            = "monospace:size=10";
 static char dmenufont[]       = "monospace:size=10";
-static const char *fonts[]          = { font };
+static const char *fonts[]          = { "Noto Color Emoji:size=12", "monospace:size=10", "Font Awesome 5 Free Solid:size=12" };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
