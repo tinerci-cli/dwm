@@ -46,3 +46,22 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+Applied Patches
+---------------
+
+- actual fullscreen (MOD+SHIFT+F)
+- always center (floating windows spawn in center)
+- attach bottom (new windows spawn on bottom of stack)
+- cfacts vanitygaps (gaps + layouts + change cfactor)
+- cool autostart (autostart in config(.def).h
+- cyclelayouts (cycle trough layouts)
+- extrabar
+- focusmonmouse
+- hide vacant tags
+- movestack & shif-tools
+- pertag
+- statusallmons (statusbar updates on all monitors)
+- swallow
+- systray (trayer for dwm)
+- xresources
