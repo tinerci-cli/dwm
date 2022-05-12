@@ -11,7 +11,6 @@ organization
 
 
 current:
-dwm-cool-autostart-6.2.diff
 dwm-actualfullscreen-20211013-cb3f58a.diff
 
 
@@ -29,6 +28,7 @@ dwm-xresources-20210827-138b405.diff
     usability:
 dwm-shif-tools-6.2.diff
 dwm-movestack-20211115-a786211.diff
+dwm-cool-autostart-6.2.diff
 
     multimon:
 dwm-statusallmons-6.2.diff
