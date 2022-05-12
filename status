@@ -1,15 +1,13 @@
 todo:
-dwm-cyclelayouts-20180524-6.2.diff
 dwm-steam-6.2.diff
-dwm-hide_vacant_tags-6.3.diff
 keybindings
 organization
 
 
 
 current:
-dwm-pertag-20200914-61bb8b2.diff
 dwm-cfacts-vanitygaps-6.2_combo.diff
+dwm-cyclelayouts-20180524-6.2.diff
 
 
 
@@ -20,6 +18,8 @@ dwm-extrabar-6.2-20210930-a786211.diff
 dwm-swallow-20201211-61bb8b2.diff
 dwm-systray-6.3.diff
 dwm-alwayscenter-20200625-f04cac6.diff
+dwm-pertag-20200914-61bb8b2.diff
+dwm-hide_vacant_tags-6.3.diff
 
     Eyecandy:
 dwm-xresources-20210827-138b405.diff
