@@ -34,24 +34,6 @@ static char *colors[][3] = {
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 
-static const char *const autostart[] = {
-	//"st", NULL,
-    "pipewire", NULL,
-    "pipewire-pulse", NULL,
-    "setbg", NULL,
-    "clipmenud", NULL,
-    "numlockx", NULL,
-    "picom", NULL,
-    "sxhkd", NULL,
-    "nm-applet", NULL,
-    "wmname", "LG3D", NULL,
-    "syncthing-gtk", "-m", NULL,
-    "unclutter", NULL,
-    "dwmblocks", NULL,
-    "xautolock", "-time", "-3", "-locker", "-slock", NULL,
-	NULL /* terminate */
-};
-
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
