@@ -98,7 +98,7 @@ static const char *termcmd[]  = { "st", NULL };
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		//{ "font",                       STRING,  &font },
+		{ "fonts",                       STRING,  &fonts },
 		{ "dmenufont",                  STRING,  &dmenufont },
 		{ "normbgcolor",                STRING,  &normbgcolor },
 		{ "normbordercolor",            STRING,  &normbordercolor },
